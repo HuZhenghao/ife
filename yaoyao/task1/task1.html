@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset = "utf-8">
+	<link rel="stylesheet" type="text/css" href="task1.css">
+	<title>表单（一）单个表单项的检验</title>
+	<script type="text/javascript">
+	window.onload = function() {
+		var button = document.getElementById("button");
+		var name = document.getElementById("name");
+		var notice = document.getElementById("notice");//获取元素
+		name.onclick = function() {
+			notice.innerHTML = "必填，长度为4~6个字符";
+			name.style.border = "2px solid #cdcdcd";
+		}//在输入错误后，点击input重新输入时将input样式还原
+		button.onclick = function() {
+			var val = name.value;
+			console.log(val);
+			if (val == null || val =="") {
+				notice.innerHTML = "姓名不能为空";
+				name.style.border = "2px solid #dc0110";
+				return false;
+			}//姓名为空
+			var len = 0;
+    		for(var i = 0; i < val.length; ++i) {
+        		if(val.charCodeAt(i) < 128)
+            		len++;
+        		else len += 2;
+    		}//通过输入值的ASCII码来判断是否为中文字符，并计算长度
+    		if (len >= 4 && len <= 16) {
+    			notice.innerHTML = "名称格式正确";
+    			name.style.border = "2px solid #60ba45";
+    			return false;
+    		}//长度正确,在4~16内
+    		else {
+    			notice.innerHTML = "名称长度不正确";
+    			name.style.border = "2px solid #dc0110";
+    			return false;
+    		}//长度不正确
+		}
+	}
+	</script>
+</head>
+<body>
+<div class="name">名称</div>
+<form>
+	<input id="name" class="input">
+	<button id="button" class="button">验证</button>
+</form>
+<p id="notice" class="notice">必填，长度为4~6个字符</p>
+</body>
+</html>

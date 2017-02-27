@@ -1,0 +1,34 @@
+body{
+	margin: 0;
+	width: 100%;
+}
+p{
+	margin: 0;
+}
+.name{
+	float: left;
+	padding: 10px 20px;
+}
+.input{
+	float: left;
+	margin: 10px 20px;
+	border:2px solid #cdcdcd;
+}
+.button{
+	float: left;
+	margin: 10px 20px;
+	background-color: #2f79b9;
+	color: white;
+	border:1px solid #286da9;
+	border-radius: 5px;
+}
+.notice{
+	float: left;
+	margin-left: 100px;
+	color:gray;
+}
+form:after{
+	content: "";
+	display: block;
+	clear: both;
+}

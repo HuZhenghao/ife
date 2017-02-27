@@ -1,0 +1,3 @@
+在head部分添加script标签，用window.onload = function(){}函数来使js在页面加载结束后运行
+刚开始的时候和jQuery的用法弄混，写成document.onload
+获取文档中的元素的时候，document.getElementById，在一开始写的时候漏掉了document

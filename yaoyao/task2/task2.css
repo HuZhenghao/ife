@@ -1,0 +1,47 @@
+body{
+	margin: 0;
+	width: 100%;
+	font-size: 20px;
+}
+p{
+	margin: 0;
+}
+.contianer{
+	width: 1000px;
+	margin: 0 auto;
+	margin-top: 100px;
+}
+.text{
+	
+	padding: 10px 20px;
+}
+.input{
+	box-sizing: border-box;
+	
+	width: 500px;
+	height: 32px;
+	margin: 10px 20px;
+	border:2px solid #cdcdcd;
+	border-radius: 5px;
+}
+.button{
+	box-sizing: border-box;
+	float: left;
+	width: 78px;
+	height: 32px;
+	margin: 10px 20px;
+	background-color: #2f79b9;
+	color: white;
+	font-size: 20px;
+	border:1px solid #286da9;
+	border-radius: 5px;
+}
+.notice{
+	padding-left: 20px;
+	color:gray;
+}
+form:after{
+	content: "";
+	display: block;
+	clear: both;
+}

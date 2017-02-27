@@ -1,0 +1,13 @@
+在实现当文本框获取焦点，进行提示的功能的时候，先使用 if(id.focus（）) 来判断，发现只有在之前给id赋予了焦点，才能判断成功，之后查询相关资料，发现使用in.onfocus = function(){},可以多次实现获取焦点时的代码功能，onblur同理，是失去焦点时的功能。
+在页面需要获取多个对象的时候，将getElementById方法先进行封装，再使用，可少写一些代码
+邮箱的验证可以用正则表达式
+		//验证邮箱格式
+		function CheckMail(mail) {
+ 			var filter  = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+ 			if (filter.test(mail)) {
+ 				return true;
+ 			}
+ 			else {			
+ 				return false;
+ 			}
+		}
