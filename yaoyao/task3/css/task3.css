@@ -1,0 +1,95 @@
+body{
+	width: 100%;
+	margin: 0;
+	font-size: 20px;
+}
+.wrap{
+	width: 600px;
+	margin: 0 auto;
+	margin-top: 200px;
+}
+.input-group{
+	text-align: center;
+	margin-bottom: 50px;
+}
+.input-radio{
+	display: inline;
+	position: relative;
+}
+.input-radio:first-child{
+	margin-right: 100px;
+}
+input[type="radio"]{
+	position: relative;
+	top: 3px;
+	width: 18px;
+	height: 18px;
+	opacity: 0;
+	cursor: pointer;
+	z-index: 1000;
+}
+.input-span{
+	display: inline-block;
+	position: absolute;
+	left: 4px;
+	top: 5px;
+	width: 18px;
+	height: 18px;
+	border:1px solid #cdcdcd;
+	border-radius: 9px;
+	cursor: pointer;
+	box-sizing:border-box;
+}
+input:hover + span{
+	border: 6px solid #3496FE;
+	box-shadow: 0 0 3px #3496FE;
+}
+input:checked +span{
+	border: 6px solid #3496FE;
+	box-shadow: 0 0 3px #3496FE;
+}
+input[type="radio"]:before:hover{
+	box-shadow: 0 0 3px #3496FE;
+}
+.select-group{
+	width: 600px;
+	margin-bottom: 50px;
+}
+.label{
+	display: inline-block;
+	width: 100px;
+	margin-right: 30px;
+	text-align: right;
+}
+.select-group select{
+	width: 150px;
+	height: 40px;
+	outline: none;
+	border:1px solid #cdcdcd;
+	border-radius: 5px;
+}
+.select-group select:last-child{
+	width: 200px;
+	margin-left: 50px;
+}
+.select-group select:focus{
+	border-color:#3396FE;
+	box-shadow: 0 0 3px #3396FE;
+	transition:all .3s;
+	-moz-transition:all .3s;
+	-o-transition:all .3s;
+}
+.work{
+	display: none;
+}
+.work input{
+	box-sizing:border-box;
+	width: 400px;
+	height: 40px;
+	border:1px solid #cdcdcd;
+	border-radius: 5px;
+	font-size: 20px;
+}
+.work input:focus{
+	box-shadow: 0 0 3px #3396FE;
+}

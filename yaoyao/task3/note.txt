@@ -1,0 +1,4 @@
+需要修改单选按钮样式时，可以使用一个span通过css改变border、border-radio来变成一个圆形，再给原来的input一个z-index设置为高层，并且使用opacity: 0;使其隐藏，最后使用绝对定位将两个圆形重合。这样看上去是span的样式，但实际上点击的还是type="radio"的input。
+
+如果将script标签放在head中，在js文件里一定要把代码放在window.onload = function(){}中，因为浏览器对html文件加载是按顺序来的，如果放在head中的js文件里的代码没有这样做，那么在运行js的时候，由于文档的dom树还没加载出来，而js的操作已经执行完毕，js将会失效。如果将script标签放在body的尾部，则可以不用这样做，因为运行js的时候整个文档已经加载出来了。
+
