@@ -1,0 +1,29 @@
+鼠标悬停模糊、流光字体、散开式边框
+
+伪元素的应用：
+::after ::before,用在div上，分别构成左右和上下边框，通过调整::after ::before的width和height，结合transition属性，形成动画效果
+
+字体升起效果：
+利用transition：translat（0,20px）改变文字的竖直位置
+
+鼠标悬停模糊效果：
+hover后给需要模糊的标签加上
+-webkit-filter: blur(2px);
+-moz-filter: blur(2px);
+-ms-filter: blur(2px);
+filter: blur(2px);
+
+流光字体效果：
+使用background-img:-webkit-linear-gradient(left,red,orange 10%,yellow 20%,green 30%,blue 40%,red 50%,orange 60%,yellow 70%,green 80%,blue 90%,red 100%)；来形成渐变的背景颜色图，left代表从左开始渐变，起始颜色是red，随后10是orange依次类推，这里使前0%到49%的颜色等于50%到99%的颜色，然后最后的颜色等于起始颜色，以达到动画无缝衔接的效果。
+使用-webkit-background-clip:text;来按照文字形状裁剪背景图
+此时文字还是原来的颜色，使用color:transparent;让文字透明，从而显现出背景的颜色
+再用background-size 来让背景横行变成双倍长度，再用动画
+@-webkit-keyframes move{
+	0%{
+		background-position: 0 0;
+	}
+	100%{
+		background-position: -100% 0;
+	}
+}
+让背景动起来最终达到流光效果

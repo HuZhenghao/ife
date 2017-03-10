@@ -1,0 +1,133 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+body {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	align-items:center;
+	-moz-box-align:center;
+	-moz-box-pack:center;
+	justify-content:center;
+	height: 100vh;
+}
+.container{
+	display: flex;
+	position: relative;
+	max-width: 800px;
+	width: 60%;
+}
+.container img{
+	width: 100%;
+	height: 100%;
+	-webkit-transition:-webkit-filter 1.5s;
+	transition:-webkit-filter 1.5s;
+	-o-transition:filter 1.5s;
+	-moz-transition:filter 1.5s;
+	transition:filter 1.5s;
+}
+.caption{
+	box-sizing: border-box;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	padding: 30px;
+	z-index: 1;
+}
+.text{
+	position: relative;
+	display: flex;
+	width: 100%;
+	height: 100%;
+	align-items:center;
+	justify-content:center;
+	opacity: 0;
+	transition:opacity 1s ease 0s;
+	box-shadow: 0 0 30px 20px rgba(0, 0, 0, 0.46);
+}
+.text::before{
+	content:'';
+	position:absolute;
+	left:0;
+	width:100%;
+	height:0;
+	overflow:hidden;
+	border:3px solid #fffffb;
+	border-width:0 3px;
+	-webkit-transition:all 1s;
+	-o-transition:all 1s;
+	-moz-transition:all 1s;
+	transition:all 1s;
+}
+.text::after{
+	content: '';
+	position: absolute;
+	top:0;
+	height: 100%;
+	width: 0;
+	border:3px solid #fff;
+	border-width: 3px 0;
+	-webkit-transition:all 1s;
+	-o-transition:all 1s;
+	-moz-transition:all 1s;
+	transition:all 1s;
+}
+.container:hover .text{
+	opacity: 1;
+}
+.container:hover img{
+	-webkit-filter: blur(2px);
+	-moz-filter: blur(2px);
+	-ms-filter: blur(2px);
+	filter: blur(2px);
+}
+.slideIn{
+	opacity:0;
+	-webkit-transform:translate(0,20px);
+	-moz-transform:translate(0,20px);
+	-ms-transform:translate(0,20px);
+	-o-transform:translate(0,20px);
+	transform:translate(0,20px);
+	transition:opacity 1s,transform 1s;
+}
+.bgimg{
+	background-image: -webkit-linear-gradient(left,red,orange 10%,yellow 20%,green 30%,blue 40%,red 50%,orange 60%,yellow 70%,green 80%,blue 90%,red 100%);
+	-webkit-background-clip:text;
+	color:transparent;
+	background-size:200% 100%;
+	animation: move 4s infinite linear;
+	-webkit-animation: move 4s infinite linear;
+	-moz-animation: move 4s infinite linear;
+}
+.container:hover .slideIn{
+	opacity:1;
+	-webkit-transform:translate(0);
+	-moz-transform:translate(0);
+	-ms-transform:translate(0);
+	-o-transform:translate(0);
+	transform:translate(0);
+}
+.container:hover .text::before{
+	height:100%;
+}
+.container:hover .text::after{
+	width:100%;
+	visibility:visible;
+}
+@-webkit-keyframes move{
+	0%{
+		background-position: 0 0;
+	}
+	100%{
+		background-position: -100% 0;
+	}
+}
+@-moz-keyframes move{
+	0%{
+		background-position: 0 0;
+	}
+	100%{
+		background-position: -100% 0;
+	}
+}
