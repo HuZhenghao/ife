@@ -1,0 +1,38 @@
+body{
+	margin: 0;
+	width: 100%;
+}
+table{
+	margin: 0 auto;
+}
+table td{
+	box-sizing:border-box;
+	width: 40px;
+	height: 40px;
+	margin: 0;
+	padding:0;
+	text-align: center;
+}
+tr:nth-child(n+2) > td:nth-child(n+2){
+	border: 1px solid #cccccc;
+}
+.container{
+	position: relative;
+	width: 440px;
+	margin: 0 auto;
+}
+.command{
+	margin-left: 100px;
+	margin-top: 10px;
+}
+#car{
+	position: absolute;
+	box-sizing:border-box;
+	width: 40px;
+	height: 40px;
+	background-color: red;
+	border-top: 10px solid blue;
+	transition:all 0.5s;
+	-webkit-transition:all 0.5s;
+	-moz-transition:all 0.5s;
+}
