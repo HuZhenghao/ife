@@ -45,12 +45,6 @@ function go(){
 		};break;
 	}
 }
-//计算并设置转向后的方向
-function calDir(x){
-    var d=(blockNow.dir+x>=0?blockNow.dir+x:3)%4;
-    blockNow.dir=d;
-    setDir(blockNow.block,direction[d]);
-}
 //定义点击执行后的执行函数
 function run(){
 	switch(input.value.trim().toLowerCase()){
