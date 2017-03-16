@@ -1,0 +1,42 @@
+body{
+	margin: 0;
+	width: 100%;
+}
+table{
+	margin: 0 auto;
+}
+table td{
+	box-sizing:border-box;
+	width: 40px;
+	height: 40px;
+	margin: 0;
+	padding:0;
+	text-align: center;
+}
+tr:nth-child(n+2) > td:nth-child(n+2){
+	border: 1px solid #cccccc;
+}
+.container{
+	width: 500px;
+	margin: 0 auto;
+}
+.command{
+	margin-left: 100px;
+	margin-top: 10px;
+}
+.top,.right,.bottom,.left{
+	background-color: red;
+	border:none !important;
+}
+.top{
+	border-top: 10px solid blue !important;
+}
+.right{
+	border-right: 10px solid blue !important;
+}
+.bottom{
+	border-bottom: 10px solid blue !important;
+}
+.left{
+	border-left: 10px solid blue !important;
+}
