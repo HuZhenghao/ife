@@ -1,0 +1,20 @@
+通过定义构造函数，再在其prototype中编写各种方法，从而达到封装的目的：、
+var MyFloat = function(ele) {
+	this.ele = ele;
+	this.mask = null;
+	this.init();
+}
+MyFloat.prototype = {
+	init:function(){},
+	show:function(){},
+	...
+}
+var layer = new MyFloat(get('floatDiv'));
+
+鼠标事件：
+mousedown,mousemove,mouseup
+
+event.clientX:鼠标到浏览器左边距离
+event.clientY:鼠标到浏览器右边距离
+ele.offsetTop:鼠标到ele元素的顶部的距离
+ele.offsetLeft:鼠标到ele元素的左边的距离
