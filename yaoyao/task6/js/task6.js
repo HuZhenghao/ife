@@ -14,7 +14,7 @@ function addEvent(ele,event,func) {
 	}
 }
 
-//定义对象
+//定义构造函数
 var MyFloat = function(ele) {
 	this.ele = ele;
 	this.mask = null;
